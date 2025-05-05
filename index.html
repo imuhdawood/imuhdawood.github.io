@@ -3,124 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Responsive Single-Page Site</title>
+  <title>Muhammad Dawood - CV</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     html { scroll-behavior: smooth; }
-    .hero { background: url('hero.jpg') no-repeat center center/cover; height: 300px; display: flex; align-items: center; justify-content: center; color: #fff; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+    body { padding-top: 70px; }
+    .nav-link { cursor: pointer; }
+    section { padding: 60px 0; }
+    footer { background-color: #f8f9fa; padding: 20px 0; }
   </style>
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="#home">My Website</a>
+      <a class="navbar-brand fw-bold" href="#summary">Muhammad Dawood</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#about" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-              <li><a class="dropdown-item" href="#team">Team</a></li>
-              <li><a class="dropdown-item" href="#mission">Mission</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-              <li><a class="dropdown-item" href="#design">Design</a></li>
-              <li><a class="dropdown-item" href="#development">Development</a></li>
-              <li><a class="dropdown-item" href="#marketing">Marketing</a></li>
-            </ul>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
+          <li class="nav-item"><a class="nav-link" href="#honours">Honours & Awards</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#competencies">Core Competencies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">  
-    <h2>Welcome to My Website</h2>
-  </section>
+  <main class="container">
+    <!-- Summary -->
+    <section id="summary">
+      <h2>Summary</h2>
+      <p>Postdoctoral researcher at the University of Oxford developing machine learning algorithms to identify disease endotypes via spatial transcriptomics and tissue imaging. Aiming to discover biomarkers, facilitate drug design, and enable personalised cancer therapy using routine histology.</p>
+    </section>
 
-  <!-- Main Content -->
-  <main class="container py-5">
-    <!-- About -->
-    <section id="about" class="mb-5">
-      <h2>About Us</h2>
-      <p>Some introductory text about your company.</p>
-      <div class="row">
-        <div id="team" class="col-md-6">
-          <h3>Our Team</h3>
-          <p>Details about the team.</p>
-        </div>
-        <div id="mission" class="col-md-6">
-          <h3>Our Mission</h3>
-          <p>Details about the mission.</p>
+    <!-- Honours & Awards -->
+    <section id="honours">
+      <h2>Honours & Awards</h2>
+      <ul>
+        <li>Fully funded PhD studentship (GlaxoSmithKline)</li>
+        <li>Best Paper Award, ICCV CDpath 2021</li>
+        <li>IT & Telecom Endowment Fund Scholarship for MSc (Pakistan HEC)</li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">PhD in Computer Science</h5>
+          <h6 class="card-subtitle mb-2 text-muted">University of Warwick, UK (2020–2024)</h6>
+          <ul>
+            <li>Developed ML algorithms to analyse tumour microenvironment heterogeneity using spatial transcriptomics and imaging.</li>
+            <li>Identified gene-expression and morphometric patterns for patient stratification and prediction.</li>
+            <li>Predicted cancer drug sensitivity from histology slides, advancing AI-based personalised therapy.</li>
+            <li>Integrated histology and multi-omics to stratify risk and identify therapeutic targets.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="mb-5">
-      <h2>Services</h2>
-      <div class="row g-4">
-        <div id="design" class="col-sm-6 col-lg-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h3 class="card-title">Design</h3>
-              <p class="card-text">Design services description.</p>
-            </div>
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5>Postdoctoral Researcher, Computational Pathology & Spatial Omics</h5>
+            <h6 class="text-muted">University of Oxford, UK (Apr 2024 – Present)</h6>
+            <p>AI-based assessment of bone marrow biopsies using high-resolution histology and spatial omics.</p>
           </div>
         </div>
-        <div id="development" class="col-sm-6 col-lg-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h3 class="card-title">Development</h3>
-              <p class="card-text">Development services description.</p>
-            </div>
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5>Graduate Teaching Assistant</h5>
+            <h6 class="text-muted">University of Warwick, UK (Jan 2021 – Apr 2024)</h6>
+            <p>Conducted labs and seminars on data mining, AI, database systems, and programming for undergrad/postgrad students.</p>
           </div>
         </div>
-        <div id="marketing" class="col-sm-6 col-lg-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h3 class="card-title">Marketing</h3>
-              <p class="card-text">Marketing services description.</p>
-            </div>
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5>Lecturer, Software Engineering Department</h5>
+            <h6 class="text-muted">University of Science & Technology Bannu, Pakistan (Mar 2019 – Oct 2020)</h6>
+            <ul>
+              <li>Module leader for AI, Python programming, data structures, and architecture labs.</li>
+              <li>Coordinated final year projects and supervised undergraduate theses.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5>Machine Learning Engineer</h5>
+            <h6 class="text-muted">INTAQSOL, Pakistan (Feb 2019 – Mar 2019)</h6>
+            <p>Predicted building 3D geometry from aerial imagery using ML techniques.</p>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- Core Competencies -->
+    <section id="competencies">
+      <h2>Core Competencies</h2>
+      <ul class="row list-unstyled">
+        <li class="col-md-4">Machine Learning</li>
+        <li class="col-md-4">Deep Learning</li>
+        <li class="col-md-4">Computer Vision</li>
+        <li class="col-md-4">Bioinformatics</li>
+        <li class="col-md-4">Medical Imaging</li>
+        <li class="col-md-4">Pharmaco-Genomics</li>
+        <li class="col-md-4">Multi-Modal Data Modelling</li>
+        <li class="col-md-4">Graph Neural Networks</li>
+        <li class="col-md-4">Natural Language Processing</li>
+        <li class="col-md-4">Spatial Transcriptomics</li>
+      </ul>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Major Publications</h2>
+      <ol>
+        <li>Dawood, M. et al. (2024). Cancer drug sensitivity prediction from routine histology images. <em>NPJ Precision Oncology</em>, 8(1), 5.</li>
+        <li>Dawood, M. et al. (2023). Cross-linking breast tumor transcriptomic states and tissue histology. <em>Cell Reports Medicine</em>, 4(12).</li>
+        <li>Deshpande, S., Dawood, M., Minhas, F., & Rajpoot, N. (2023). SynCLay: Interactive synthesis of histology images from bespoke cellular layouts. <em>Medical Image Analysis</em>, 102995.</li>
+        <li>Lu, W., Toss, M., Dawood, M., et al. (2022). SlideGraph+: Whole slide image level graphs to predict HER2 status in breast cancer. <em>Medical Image Analysis</em>, 80, 102486.</li>
+        <li>Dawood, M., Asif, A., & Minhas, F. (2020). Deep-PHURIE: deep learning-based hurricane intensity estimation from infrared satellite imagery. <em>Neural Computing and Applications</em>, 32, 9009–9017.</li>
+        <li>Asif, A., Dawood, M., Jan, B., et al. (2020). PHURIE: hurricane intensity estimation from infrared satellite imagery using ML. <em>Neural Computing and Applications</em>, 32, 4821–4834.</li>
+      </ol>
     </section>
 
     <!-- Contact -->
     <section id="contact">
-      <h2>Contact Us</h2>
-      <form>
-        <div class="mb-3">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Your Name">
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="you@example.com">
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" rows="4"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send</button>
-      </form>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:engrodawood@gmail.com">engrodawood@gmail.com</a></p>
+      <p>Phone: +44 74-05219876</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/iamdawood" target="_blank">iamdawood</a></p>
+      <p>Google Scholar: <a href="https://scholar.google.com/citations?user=a-szm64AAAAJ&hl=en" target="_blank">a-szm64AAAAJ</a></p>
+      <p>ORCiD: <a href="https://orcid.org/0000-0001-5358-9478" target="_blank">0000-0001-5358-9478</a></p>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <div class="container">&copy; 2025 My Website. All rights reserved.</div>
+  <footer>
+    <div class="container text-center">
+      <small>&copy; 2025 Muhammad Dawood. All rights reserved.</small>
+    </div>
   </footer>
 
   <!-- Bootstrap JS -->
