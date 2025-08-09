@@ -1,162 +1,257 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Muhammad Dawood - CV</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muhammad Dawood — CV</title>
+  <meta name="description" content="Postdoctoral researcher at the University of Oxford. Machine learning for spatial transcriptomics and tissue imaging; biomarkers and personalised cancer therapy." />
+  <link rel="canonical" href="https://imuhdawood.github.io/" />
+
+  <!-- Social cards -->
+  <meta property="og:title" content="Muhammad Dawood — CV" />
+  <meta property="og:description" content="Postdoctoral researcher at the University of Oxford. ML for spatial omics and histology." />
+  <meta property="og:url" content="https://imuhdawood.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Favicons (simple SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📄%3C/text%3E%3C/svg%3E">
+
+  <!-- Minimal, fast CSS -->
   <style>
-    html { scroll-behavior: smooth; }
-    body { padding-top: 70px; }
-    .nav-link { cursor: pointer; }
-    section { padding: 60px 0; }
-    footer { background-color: #f8f9fa; padding: 20px 0; }
+    :root{
+      --bg:#ffffff; --fg:#0b0b0f; --muted:#5c606a; --card:#f6f7f9; --line:#e7e9ed; --accent:#2f6feb;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b0b0f; --fg:#eaeaf0; --muted:#b2b5bd; --card:#13151a; --line:#242731; --accent:#6ba2ff; }
+    }
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; background:var(--bg); color:var(--fg);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    .container{max-width:960px; margin:auto; padding:24px}
+    header{
+      position:sticky; top:0; z-index:10; backdrop-filter:saturate(140%) blur(6px);
+      background:color-mix(in srgb, var(--bg) 85%, transparent);
+      border-bottom:1px solid var(--line);
+    }
+    nav{display:flex; align-items:center; gap:16px; justify-content:space-between}
+    .brand{font-weight:800; letter-spacing:.2px; font-size:18px}
+    .nav a{
+      color:var(--muted); text-decoration:none; padding:10px 8px; border-radius:8px; font-weight:600;
+    }
+    .nav a:hover,.nav a:focus{outline:0; color:var(--fg); background:var(--card)}
+    .nav a[aria-current="page"]{color:var(--fg); box-shadow:inset 0 -2px 0 var(--accent)}
+    .actions{display:flex; gap:10px}
+    .btn{
+      display:inline-flex; align-items:center; gap:.5ch; padding:10px 14px; border-radius:12px; border:1px solid var(--line);
+      background:var(--card); color:var(--fg); text-decoration:none; font-weight:600;
+    }
+    .btn:hover{filter:brightness(1.05)}
+    .skip-link{position:absolute; left:-9999px}
+    .skip-link:focus{left:16px; top:12px; background:var(--accent); color:#fff; padding:8px 12px; border-radius:8px; z-index:1000}
+
+    h1{font-size:30px; line-height:1.2; margin:0 0 8px}
+    h2{font-size:22px; margin:32px 0 12px}
+    h3{font-size:18px; margin:18px 0 6px}
+    section{padding:18px 0; border-bottom:1px dashed var(--line)}
+    .lead{color:var(--muted); max-width:70ch}
+    .pill{display:inline-block; border:1px solid var(--line); background:var(--card); padding:6px 10px; border-radius:999px; margin:4px 6px 0 0; font-weight:600}
+    .grid{display:grid; gap:14px}
+    @media (min-width:720px){ .grid.cols-2{grid-template-columns:1fr 1fr} }
+    .card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px}
+    ol.publications{padding-left:18px}
+    footer{padding:24px 0; color:var(--muted)}
+    .small{font-size:14px}
+    .top-link{position:fixed; right:18px; bottom:18px; text-decoration:none; border:1px solid var(--line); background:var(--card); padding:10px 12px; border-radius:12px}
+    a.external::after{content:" ↗"}
+    /* Print */
+    @media print{
+      header,.top-link{display:none}
+      body{background:#fff; color:#000}
+      a::after{content:" (" attr(href) ")"; font-weight:normal}
+      .card{border:none; background:#fff; padding:0}
+      section{border:none; padding:8px 0}
+    }
   </style>
+
+  <!-- Structured data (enhances Google/Scholar cards) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Muhammad Dawood",
+    "url":"https://imuhdawood.github.io/",
+    "jobTitle":"Postdoctoral Researcher",
+    "affiliation":{"@type":"Organization","name":"University of Oxford"},
+    "email":"mailto:engrodawood@gmail.com",
+    "telephone":"+447405219876",
+    "sameAs":[
+      "https://www.linkedin.com/in/iamdawood",
+      "https://scholar.google.com/citations?user=a-szm64AAAAJ",
+      "https://orcid.org/0000-0001-5358-9478"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header>
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#summary">Muhammad Dawood</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
-          <li class="nav-item"><a class="nav-link" href="#honours">Honours & Awards</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#competencies">Core Competencies</a></li>
-          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+      <nav aria-label="Primary">
+        <div class="brand">Muhammad Dawood</div>
+        <div class="nav" role="menubar">
+          <a href="#summary">Summary</a>
+          <a href="#awards">Awards</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#publications">Publications</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="actions">
+          <a class="btn" href="mailto:engrodawood@gmail.com">Email</a>
+          <button class="btn" onclick="window.print()">Print / Save PDF</button>
+        </div>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <main class="container">
-    <!-- Summary -->
-    <section id="summary">
-      <h2>Summary</h2>
-      <p>Postdoctoral researcher at the University of Oxford developing machine learning algorithms to identify disease endotypes via spatial transcriptomics and tissue imaging. Aiming to discover biomarkers, facilitate drug design, and enable personalised cancer therapy using routine histology.</p>
+  <main id="content" class="container" tabindex="-1">
+    <h1>Muhammad Dawood</h1>
+    <p class="lead">Postdoctoral researcher at the University of Oxford developing machine learning algorithms to identify disease endotypes via spatial transcriptomics and tissue imaging. Aiming to discover biomarkers, facilitate drug design, and enable personalised cancer therapy using routine histology.</p>
+
+    <section id="summary" aria-labelledby="h-summary">
+      <h2 id="h-summary">Summary</h2>
+      <div class="card">
+        <p>Research interests: <strong>Spatial omics, computational pathology, multi-modal learning</strong>, and <strong>biomarker discovery</strong>. Open to collaborations.</p>
+      </div>
     </section>
 
-    <!-- Honours & Awards -->
-    <section id="honours">
-      <h2>Honours & Awards</h2>
+    <section id="awards" aria-labelledby="h-awards">
+      <h2 id="h-awards">Honours & Awards</h2>
       <ul>
         <li>Fully funded PhD studentship (GlaxoSmithKline)</li>
         <li>Best Paper Award, ICCV CDpath 2021</li>
-        <li>IT & Telecom Endowment Fund Scholarship for MSc (Pakistan HEC)</li>
+        <li>IT &amp; Telecom Endowment Fund Scholarship for MSc (Pakistan HEC)</li>
       </ul>
     </section>
 
-    <!-- Education -->
-    <section id="education">
-      <h2>Education</h2>
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">PhD in Computer Science</h5>
-          <h6 class="card-subtitle mb-2 text-muted">University of Warwick, UK (2020–2024)</h6>
+    <section id="education" aria-labelledby="h-edu">
+      <h2 id="h-edu">Education</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>PhD, Computer Science</h3>
+          <p class="small"><em>University of Warwick, UK (2020–2024)</em></p>
           <ul>
-            <li>Developed ML algorithms to analyse tumour microenvironment heterogeneity using spatial transcriptomics and imaging.</li>
-            <li>Identified gene-expression and morphometric patterns for patient stratification and prediction.</li>
-            <li>Predicted cancer drug sensitivity from histology slides, advancing AI-based personalised therapy.</li>
-            <li>Integrated histology and multi-omics to stratify risk and identify therapeutic targets.</li>
+            <li>ML for tumour microenvironment heterogeneity using spatial transcriptomics and imaging.</li>
+            <li>Gene-expression &amp; morphometric patterns for patient stratification and prediction.</li>
+            <li>Predicted cancer drug sensitivity from histology; integrated histology and multi-omics.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="timeline">
-        <div class="card mb-3">
-          <div class="card-body">
-            <h5>Postdoctoral Researcher, Computational Pathology & Spatial Omics</h5>
-            <h6 class="text-muted">University of Oxford, UK (Apr 2024 – Present)</h6>
-            <p>AI-based assessment of bone marrow biopsies using high-resolution histology and spatial omics.</p>
-          </div>
+    <section id="experience" aria-labelledby="h-exp">
+      <h2 id="h-exp">Experience</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Postdoctoral Researcher — Computational Pathology & Spatial Omics</h3>
+          <p class="small"><em>University of Oxford, UK (Apr 2024 – Present)</em></p>
+          <p>AI-based assessment of bone marrow biopsies using high-resolution histology and spatial omics.</p>
         </div>
-        <div class="card mb-3">
-          <div class="card-body">
-            <h5>Graduate Teaching Assistant</h5>
-            <h6 class="text-muted">University of Warwick, UK (Jan 2021 – Apr 2024)</h6>
-            <p>Conducted labs and seminars on data mining, AI, database systems, and programming for undergrad/postgrad students.</p>
-          </div>
+        <div class="card">
+          <h3>Graduate Teaching Assistant</h3>
+          <p class="small"><em>University of Warwick, UK (Jan 2021 – Apr 2024)</em></p>
+          <p>Labs/seminars in data mining, AI, DB systems, and programming (UG/PG).</p>
         </div>
-        <div class="card mb-3">
-          <div class="card-body">
-            <h5>Lecturer, Software Engineering Department</h5>
-            <h6 class="text-muted">University of Science & Technology Bannu, Pakistan (Mar 2019 – Oct 2020)</h6>
-            <ul>
-              <li>Module leader for AI, Python programming, data structures, and architecture labs.</li>
-              <li>Coordinated final year projects and supervised undergraduate theses.</li>
-            </ul>
-          </div>
+        <div class="card">
+          <h3>Lecturer, Software Engineering</h3>
+          <p class="small"><em>UST Bannu, Pakistan (Mar 2019 – Oct 2020)</em></p>
+          <ul>
+            <li>Module leader for AI, Python, Data Structures, Architecture labs.</li>
+            <li>Coordinated final-year projects and supervised theses.</li>
+          </ul>
         </div>
-        <div class="card mb-3">
-          <div class="card-body">
-            <h5>Machine Learning Engineer</h5>
-            <h6 class="text-muted">INTAQSOL, Pakistan (Feb 2019 – Mar 2019)</h6>
-            <p>Predicted building 3D geometry from aerial imagery using ML techniques.</p>
-          </div>
+        <div class="card">
+          <h3>Machine Learning Engineer</h3>
+          <p class="small"><em>INTAQSOL, Pakistan (Feb 2019 – Mar 2019)</em></p>
+          <p>Predicted 3D building geometry from aerial imagery using ML.</p>
         </div>
       </div>
     </section>
 
-    <!-- Core Competencies -->
-    <section id="competencies">
-      <h2>Core Competencies</h2>
-      <ul class="row list-unstyled">
-        <li class="col-md-4">Machine Learning</li>
-        <li class="col-md-4">Deep Learning</li>
-        <li class="col-md-4">Computer Vision</li>
-        <li class="col-md-4">Bioinformatics</li>
-        <li class="col-md-4">Medical Imaging</li>
-        <li class="col-md-4">Pharmaco-Genomics</li>
-        <li class="col-md-4">Multi-Modal Data Modelling</li>
-        <li class="col-md-4">Graph Neural Networks</li>
-        <li class="col-md-4">Natural Language Processing</li>
-        <li class="col-md-4">Spatial Transcriptomics</li>
-      </ul>
+    <section id="skills" aria-labelledby="h-skills">
+      <h2 id="h-skills">Core Competencies</h2>
+      <p>
+        <span class="pill">Machine Learning</span>
+        <span class="pill">Deep Learning</span>
+        <span class="pill">Computer Vision</span>
+        <span class="pill">Bioinformatics</span>
+        <span class="pill">Medical Imaging</span>
+        <span class="pill">Pharmaco-Genomics</span>
+        <span class="pill">Multi-Modal Modelling</span>
+        <span class="pill">Graph Neural Networks</span>
+        <span class="pill">NLP</span>
+        <span class="pill">Spatial Transcriptomics</span>
+      </p>
     </section>
 
-    <!-- Publications -->
-    <section id="publications">
-      <h2>Major Publications</h2>
-      <ol>
-        <li>Dawood, M. et al. (2024). Cancer drug sensitivity prediction from routine histology images. <em>NPJ Precision Oncology</em>, 8(1), 5.</li>
-        <li>Dawood, M. et al. (2023). Cross-linking breast tumor transcriptomic states and tissue histology. <em>Cell Reports Medicine</em>, 4(12).</li>
-        <li>Deshpande, S., Dawood, M., Minhas, F., & Rajpoot, N. (2023). SynCLay: Interactive synthesis of histology images from bespoke cellular layouts. <em>Medical Image Analysis</em>, 102995.</li>
-        <li>Lu, W., Toss, M., Dawood, M., et al. (2022). SlideGraph+: Whole slide image level graphs to predict HER2 status in breast cancer. <em>Medical Image Analysis</em>, 80, 102486.</li>
-        <li>Dawood, M., Asif, A., & Minhas, F. (2020). Deep-PHURIE: deep learning-based hurricane intensity estimation from infrared satellite imagery. <em>Neural Computing and Applications</em>, 32, 9009–9017.</li>
-        <li>Asif, A., Dawood, M., Jan, B., et al. (2020). PHURIE: hurricane intensity estimation from infrared satellite imagery using ML. <em>Neural Computing and Applications</em>, 32, 4821–4834.</li>
+    <section id="publications" aria-labelledby="h-pubs">
+      <h2 id="h-pubs">Major Publications</h2>
+      <ol class="publications">
+        <li>2024 — <strong>Cancer drug sensitivity prediction from routine histology images</strong>. <em>NPJ Precision Oncology</em>. <a class="external" href="https://www.nature.com/articles/s41698-023-00452-1" target="_blank" rel="noopener">Link</a></li>
+        <li>2023 — <strong>Cross-linking breast tumor transcriptomic states and tissue histology</strong>. <em>Cell Reports Medicine</em>. <a class="external" href="https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(23)00384-4" target="_blank" rel="noopener">Link</a></li>
+        <li>2023 — <strong>SynCLay: Interactive synthesis of histology images</strong>. <em>Medical Image Analysis</em>. <a class="external" href="https://doi.org/10.1016/j.media.2023.102995" target="_blank" rel="noopener">DOI</a></li>
+        <li>2022 — <strong>SlideGraph+: Predict HER2 status in breast cancer</strong>. <em>Medical Image Analysis</em>. <a class="external" href="https://doi.org/10.1016/j.media.2021.102486" target="_blank" rel="noopener">DOI</a></li>
+        <li>2020 — <strong>Deep-PHURIE: hurricane intensity estimation</strong>. <em>NCA</em>. <a class="external" href="https://doi.org/10.1007/s00521-019-04182-2" target="_blank" rel="noopener">DOI</a></li>
+        <li>2020 — <strong>PHURIE: hurricane intensity estimation with ML</strong>. <em>NCA</em>. <a class="external" href="https://doi.org/10.1007/s00521-019-04182-2" target="_blank" rel="noopener">DOI</a></li>
       </ol>
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:engrodawood@gmail.com">engrodawood@gmail.com</a></p>
-      <p>Phone: +44 74-05219876</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/iamdawood" target="_blank">iamdawood</a></p>
-      <p>Google Scholar: <a href="https://scholar.google.com/citations?user=a-szm64AAAAJ&hl=en" target="_blank">a-szm64AAAAJ</a></p>
-      <p>ORCiD: <a href="https://orcid.org/0000-0001-5358-9478" target="_blank">0000-0001-5358-9478</a></p>
+    <section id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact">Contact</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <p>Email: <a href="mailto:engrodawood@gmail.com">engrodawood@gmail.com</a><br>
+             Phone: <a href="tel:+447405219876">+44 7405 219876</a></p>
+          <p>
+            <a class="external" href="https://www.linkedin.com/in/iamdawood" target="_blank" rel="noopener">LinkedIn</a> •
+            <a class="external" href="https://scholar.google.com/citations?user=a-szm64AAAAJ" target="_blank" rel="noopener">Google Scholar</a> •
+            <a class="external" href="https://orcid.org/0000-0001-5358-9478" target="_blank" rel="noopener">ORCiD</a>
+          </p>
+        </div>
+        <div class="card">
+          <p><strong>Availability:</strong> Open to research collaborations and speaking opportunities.</p>
+        </div>
+      </div>
     </section>
+
+    <footer class="small">
+      <p>© <span id="y"></span> Muhammad Dawood. Last updated <time id="lu" datetime=""></time>.</p>
+    </footer>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container text-center">
-      <small>&copy; 2025 Muhammad Dawood. All rights reserved.</small>
-    </div>
-  </footer>
+  <a href="#top" class="top-link" aria-label="Back to top">↑</a>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Year + last updated
+    const d=new Date(); document.getElementById('y').textContent=d.getFullYear();
+    const lu=document.getElementById('lu'); lu.textContent=new Intl.DateTimeFormat(document.documentElement.lang,{dateStyle:'long'}).format(d); lu.setAttribute('datetime',d.toISOString());
+    // Active link highlighting
+    const links=[...document.querySelectorAll('.nav a')];
+    const secs=[...document.querySelectorAll('main section')];
+    const obs=new IntersectionObserver(entries=>{
+      const vis=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+      if(!vis) return;
+      links.forEach(a=>a.removeAttribute('aria-current'));
+      const id=vis.target.getAttribute('id');
+      const active=document.querySelector(`.nav a[href="#${id}"]`);
+      if(active) active.setAttribute('aria-current','page');
+    },{rootMargin:'-40% 0px -55% 0px', threshold:[0,0.25,0.5,0.75,1]});
+    secs.forEach(s=>obs.observe(s));
+  </script>
 </body>
 </html>
